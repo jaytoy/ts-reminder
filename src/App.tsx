@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import NewReminder from './components/NewReminder';
 import ReminderList from './components/ReminderList';
 import Reminder from './models/reminder';
 import reminderService from './services/reminder';
@@ -21,7 +22,10 @@ function App() {
  }
 
   return (
-    <ReminderList items={reminders} onRemoveReminder={removeReminder}/>
+    <div>
+      <NewReminder />
+      <ReminderList items={reminders} onRemoveReminder={removeReminder}/>
+    </div>
   );
 }
 
